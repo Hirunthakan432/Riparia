@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Riparia",
+      "hasCanvas": false,
+      "bodyTextLen": 438,
+      "bodyTextHash": "85a8eeaa714a32d83552067d4c13536931e8d2dc10024fda2bd0f20e1971f996",
+      "bodyTextPrefix": "Riparia Charting waterways… Riparia WATERWAY ATLAS / Satellite C",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Riparia",
+      "hasCanvas": false,
+      "bodyTextLen": 146,
+      "bodyTextHash": "d02f5d37e94b5da784fcb786b0326d1acae706ad0b8f8eaf733d0a067916c418",
+      "bodyTextPrefix": "Riparia Charting waterways… Riparia WATERWAY ATLAS River Canal L",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "mobile: body text changed (118 -> 146 chars, hash mismatch)"
+  ]
+}

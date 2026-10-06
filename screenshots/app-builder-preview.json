@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Riparia",
+      "hasCanvas": false,
+      "bodyTextLen": 438,
+      "bodyTextHash": "85a8eeaa714a32d83552067d4c13536931e8d2dc10024fda2bd0f20e1971f996",
+      "bodyTextPrefix": "Riparia Charting waterways… Riparia WATERWAY ATLAS / Satellite C",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Riparia",
+      "hasCanvas": false,
+      "bodyTextLen": 118,
+      "bodyTextHash": "83de4c2426b4d36ab9d47c41a180cfe0a0ce910f83978f2c58ab2f67de9741de",
+      "bodyTextPrefix": "Riparia WATERWAY ATLAS River Canal Lake Reservoir Saline lake We",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #071114;
+  --color-surface: #0e1a1e;
+  --color-elevated: #152428;
+  --color-fg: #e6eef0;
+  --color-muted: #8a9ea4;
+  --color-subtle: #5d7176;
+  --color-accent: #6cb8b0;
+  --color-accent-fg: #071114;
+  --color-border: color-mix(in oklab, #e6eef0 12%, transparent);
+  --color-border-strong: color-mix(in oklab, #e6eef0 22%, transparent);
+  --color-ring: #6cb8b0;
+  --color-water: #6cb8b0;
+  --color-water-dim: color-mix(in oklab, #6cb8b0 35%, transparent);
+  --color-kind-river: #7ec9c2;
+  --color-kind-stream: #9ad4c8;
+  --color-kind-canal: #9aaeb2;
+  --color-kind-lake: #6cb8b0;
+  --color-kind-reservoir: #6aa3c4;
+  --color-kind-wetland: #6a9a80;
+  --color-kind-alkaline: #9aa58a;
+  --color-kind-tidal: #7eb0c8;
+  --color-kind-pond: #88c4b8;
+  --color-kind-drain: #7d8c90;
+  --color-kind-lagoon: #6ba8b4;
+  --color-kind-oxbow: #7ab8a0;
+  --color-kind-estuary: #6a9cb0;
+  --color-kind-delta: #5ea090;
+  --color-kind-unknown: #8a9ea4;
+  --color-danger: #c9847a;
+  --color-warn: #c4b08a;
+
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.leaflet-container {
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-control-attribution,
+.leaflet-control-zoom {
+  display: none;
+}
+
+.leaflet-pane svg path {
+  transition:
+    stroke-opacity 160ms ease,
+    fill-opacity 160ms ease,
+    stroke-width 160ms ease;
+}
+
+.id-pulse {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.id-pulse::before,
+.id-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--color-accent);
+}
+
+.id-pulse::after {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  animation: id-ring 1.6s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)) infinite;
+}
+
+@keyframes id-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(3.4);
+    opacity: 0;
+  }
+}
+
+.panel-enter {
+  animation: panel-in 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chrome-panel {
+  background: color-mix(in oklab, var(--color-surface) 92%, transparent);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 40px color-mix(in oklab, #000 38%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
